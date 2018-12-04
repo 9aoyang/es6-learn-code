@@ -1,3 +1,6 @@
+// import './class/let&const'
+import './class/destructuring-assignment'
+
 class Test {
   constructor() {
     this.a = 'hello world'
@@ -7,4 +10,5 @@ class Test {
 let test = new Test()
 
 document.body.innerHTML = test.a
+
 
