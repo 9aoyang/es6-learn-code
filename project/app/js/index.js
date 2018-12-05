@@ -1,5 +1,6 @@
 // import './class/let&const'
-import './class/destructuring-assignment'
+// import './class/destructuring-assignment'
+import './class/regular'
 
 class Test {
   constructor() {
