@@ -1,8 +1,10 @@
+import 'babel-polyfill'
 // import './class/let&const'
 // import './class/destructuring-assignment'
 // import './class/regular'
-import 'babel-polyfill'
-import './class/string'
+// import './class/string'
+// import './class/array'
+import './class/function'
 
 class Test {
   constructor() {
