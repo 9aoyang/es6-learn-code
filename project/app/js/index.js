@@ -4,7 +4,8 @@ import 'babel-polyfill'
 // import './class/regular'
 // import './class/string'
 // import './class/array'
-import './class/function'
+// import './class/function'
+import './class/object'
 
 class Test {
   constructor() {
