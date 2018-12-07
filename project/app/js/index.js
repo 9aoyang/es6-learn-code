@@ -5,7 +5,8 @@ import 'babel-polyfill'
 // import './class/string'
 // import './class/array'
 // import './class/function'
-import './class/symbol'
+// import './class/symbol'
+import './class/set&map'
 
 class Test {
   constructor() {
