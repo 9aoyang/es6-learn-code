@@ -94,5 +94,97 @@
   let o = {}
   wm.set(o, 123)
   console.log(wm.get(o));
+}
+
+{
+  // Map & Array
+  let map = new Map()
+  let array = []
+  // 增
+  map.set('t', 1)
+  array.push({t: 1})
+  console.info('map-array', map, array);
+
+  // 查
+  let map_exist = map.has('t')
+  let array_exist = array.find(item => item.t)
+  console.info('map-array_exist', map_exist, array_exist);
+
+  // 改
+  map.set('t', 2)
+  array.forEach(item => item.t ? item.t = 2 : '')
+  console.info('map-array_modify', map, array);
+
+  // 删
+  map.delete('t')
+  let index = array.findIndex(item => item.t)
+  array.splice(index, 1)
+  console.info('map-array_empty', map, array);
+}
+
+{
+  // Set & Array
+  let set = new Set()
+  let array = []
+
+  // 增
+  set.add({t: 1})
+  array.push({t: 1})
+  console.info('set-array', set, array)
+
+  // 查
+  let set_exist = set.has({t: 1})
+  let array_exist = array.find(item => item.t)
+  console.info('set-array_exist', set_exist, array_exist);
+
+  // 改
+  set.forEach(item => item.t ? item.t = 2 : '')
+  array.forEach(item => item.t ? item.t = 2 : '')
+  console.info('set-array_modify', set, array);
+
+  // 删
+  set.forEach(item => item.t ? set.delete(item) : '')
+  let index = array.findIndex(item => item.t)
+  array.splice(index, 1)
+  console.info('set-array_empty', set, array);
+}
+
+{
+  // Map & Set & Object
+  let item = {t: 1}
+  let map = new Map()
+  let set = new Set()
+  let obj = {}
+
+  // 增
+  map.set('t', 1)
+  set.add(item)
+  obj['t'] = 1
+
+  console.info('map-set-obj_exist', map, set, obj);
+
+  // 查
+  console.info({
+    map_exist: map.has('t'),
+    set_exist: set.has(item),
+    obj_exist: 't' in obj
+  });
+
+  // 改
+  map.set('t', 2)
+  item.t = 2
+  obj['t'] = 2
+
+  console.info('map-set-obj_modify', map, set, obj);
+
+  // 删
+  map.delete('t')
+  set.delete(item)
+  delete obj['t']
+
+  console.info('map-set-obj_delete', map, set, obj);
 
 }
+
+
+// 总结: 优先使用Map进行存储，有数据唯一性要求时使用Set，放弃传统的Array和Object
