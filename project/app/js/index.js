@@ -6,7 +6,8 @@ import 'babel-polyfill'
 // import './class/array'
 // import './class/function'
 // import './class/symbol'
-import './class/set&map'
+// import './class/set&map'
+import './class/proxy&reflect'
 
 class Test {
   constructor() {
