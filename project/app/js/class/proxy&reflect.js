@@ -98,7 +98,6 @@
       return validator(this, personValidator)
     }
   }
-
   const person = new Person('9aoyang', 23)
 
   console.info(person)
