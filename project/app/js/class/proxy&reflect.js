@@ -67,11 +67,11 @@
   function validator(target, validator) {
     return new Proxy(target, {
       _validator: validator,
-      set(target, key, value) {
+      set(target, key, value, proxy) {
         if(target.hasOwnProperty(key)) {
           let va = this._validator[key]
           if (!!va(value)) {
-            return Reflect.set(target, key, value)
+            return Reflect.set(target, key, value, proxy)
           } else {
             throw Error(`不能设置${key}到${value}`)
           }
