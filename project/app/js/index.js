@@ -11,6 +11,7 @@ import 'babel-polyfill'
 // import './class/class'
 // import './class/promise'
 // import './class/iterator'
-import './class/generator'
+// import './class/generator'
+import './class/decorator'
 
 
